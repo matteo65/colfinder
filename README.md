@@ -268,13 +268,7 @@ Expected block size:
 Failure occurs if:
 
 ```text
-block_size <= 370,000,000
-```
-
-or
-
-```text
-block_size >= 380,000,000
+block_size <= 370,000,000 or block_size >= 380,000,000
 ```
 
 This indicates a significant deviation from the expected uniform distribution.
