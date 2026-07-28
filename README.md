@@ -395,7 +395,7 @@ gcc -O3 -mcmodel=medium colfinder.c prng.c -o colfinder
 
 POSIX-compatible C compiler should work.
 
-The project has no exter*al dependencies.
+The project has no external dependencies.
 
 ## Usage
 
