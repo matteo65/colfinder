@@ -280,19 +280,12 @@ Such events are considered extraordinarily unlikely for a correctly behaving 64-
 
 #### Excessive Number of Collisions
 
-Failure occurs if:
+Failure occurs if: **collision_count > 8**
 
-```text
-collision_count > 8
-```
 
 #### No Collisions Detected
 
-Failure occurs if the final collision count is:
-
-```text
-0
-```
+Failure occurs if the final **collision_count == 0**
 
 A complete absence of collisions is statistically possible but sufficiently unlikely to be considered suspicious.
 
@@ -304,19 +297,9 @@ The test is considered successful when:
 - No failure condition occurs
 - The final collision count is between 1 and 8 inclusive
 
-The theoretical expectation is:
+The theoretical expectation is: **3.903 collisions**  
 
-```text
-3.903 collisions
-```
-
-Values in the range:
-
-```text
-3 to 5 collisions
-```
-
-can be regarded as particularly close to the theoretical prediction.
+Values in the range: **3 to 5 collisions** can be regarded as particularly close to the theoretical prediction.
 
 ## Project Structure
 
