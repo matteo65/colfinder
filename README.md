@@ -75,13 +75,7 @@ Approximate probabilities are:
 | 7 | 5.6% |
 | 8 | 2.7% |
 
-The most likely outcomes are therefore between:
-
-```text
-2 and 5 collisions
-```
-
-which are centered around the theoretical expectation.
+The most likely outcomes are therefore between **2 and 5 collisions** which are centered around the theoretical expectation.
 
 ### Interpreting Results
 
@@ -91,11 +85,7 @@ Collisions are expected.
 
 In fact, finding no collisions at all may be as suspicious as finding too many.
 
-For a truly random 64-bit source generating 12 billion values:
-
-```text
-P(0 collisions) ≈ 2%
-```
+For a truly random 64-bit source generating 12 billion values: **P(0 collisions) ≈ 2%**  
 
 Therefore, a complete absence of collisions is possible but relatively unlikely.
 
@@ -123,17 +113,9 @@ For this reason, it should be considered a complementary validation tool rather 
 
 The probability of observing a value three times among 12 billion uniformly random 64-bit outputs is extraordinarily small.
 
-The expected number of triple collisions is approximately:
+The expected number of triple collisions is approximately: **n³ / (6N²)**  
 
-```text
-n³ / (6N²)
-```
-
-which yields:
-
-```text
-≈ 8.5 × 10⁻¹⁰
-```
+which yields: **≈ 8.5 × 10⁻¹⁰**  
 
 This corresponds to less than one expected event in a billion independent executions of the test.
 
@@ -141,33 +123,15 @@ For this reason, the appearance of a triple collision is treated by colfinder as
 
 ### Accepted Range
 
-Although the theoretical expectation is approximately:
+Although the theoretical expectation is approximately: **3.9 collisions**  random variation naturally occurs.  
 
-```text
-3.9 collisions
-```
-
-random variation naturally occurs.
-
-colfinder therefore accepts any final result in the interval:
-
-```text
-1 to 8 collisions
-```
-
-provided that no other failure condition is triggered.
+colfinder therefore accepts any final result in the interval: **1 to 8 collisions** provided that no other failure condition is triggered.
 
 This range comfortably encompasses the vast majority of outcomes expected from a statistically sound 64-bit PRNG generating the first 12 billion values of its sequence.
 
 ## Overview
 
-The program analyzes the first:
-
-```text
-12,000,000,000
-```
-
-generated 64-bit values.
+The program analyzes the first **12,000,000,000** generated 64-bit values.
 
 The final result provides a direct measurement of the actual number of duplicated values observed.
 
@@ -179,13 +143,7 @@ To overcome this limitation, colfinder divides the analysis into 32 independent 
 
 ### Block Partitioning
 
-For pass:
-
-```text
-0, 1, 2, ... 31
-```
-
-the generator is restarted from the original seed and all 12 billion values are regenerated.
+For pass **0, 1, 2, ... 31** the generator is restarted from the original seed and all 12 billion values are regenerated.
 
 Only values whose lower 5 bits match the current pass number are retained:
 
@@ -193,14 +151,7 @@ Only values whose lower 5 bits match the current pass number are retained:
 (value & 31) == block_id
 ```
 
-Assuming a uniform distribution, each block contains approximately:
-
-```text
-12,000,000,000 / 32
-≈ 375,000,000 values
-```
-
-which fits into roughly 3 GB of memory.
+Assuming a uniform distribution, each block contains approximately **12,000,000,000 / 32 ≈ 375,000,000 values** which fits into roughly 3 GB of memory.
 
 ### Sorting
 
@@ -239,11 +190,7 @@ No temporary files are created.
 
 ## Performance
 
-Typical execution time:
-
-```text
-20 to 30 minutes
-```
+Typical execution time: **20 to 30 minutes**
 
 depending on:
 
@@ -259,17 +206,9 @@ The test terminates immediately when one of the following conditions occurs.
 
 #### Non-Uniform Block Size
 
-Expected block size:
+Expected block size: **375,000,000**
 
-```text
-375,000,000
-```
-
-Failure occurs if:
-
-```text
-block_size <= 370,000,000 or block_size >= 380,000,000
-```
+Failure occurs if: **block_size <= 370,000,000 or block_size >= 380,000,000**  
 
 This indicates a significant deviation from the expected uniform distribution.
 
@@ -281,7 +220,6 @@ Such events are considered extraordinarily unlikely for a correctly behaving 64-
 #### Excessive Number of Collisions
 
 Failure occurs if: **collision_count > 8**
-
 
 #### No Collisions Detected
 
