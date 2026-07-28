@@ -282,15 +282,6 @@ This indicates a significant deviation from the expected uniform distribution.
 #### Triple-or-Higher Collision
 
 Failure occurs if a value appears three or more times.
-
-Example:
-
-```text
-X
-X
-X
-```
-
 Such events are considered extraordinarily unlikely for a correctly behaving 64-bit PRNG over 12 billion outputs.
 
 #### Excessive Number of Collisions
