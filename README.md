@@ -1,6 +1,6 @@
-# colfinder
+# colfinder 1.0
 
-**colfinder 1.0** is a high-performance collision analysis tool for 64-bit pseudo-random number generators (PRNGs).
+**Colfinder** is a high-performance collision analysis tool for 64-bit pseudo-random number generators (PRNGs).
 
 Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **12 billion generated values**.
 
