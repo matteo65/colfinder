@@ -78,7 +78,7 @@ Approximate probabilities are:
 The most likely outcomes are therefore between:
 
 ```text
-3 and 5 collisions
+2 and 5 collisions
 ```
 
 which are centered around the theoretical expectation.
