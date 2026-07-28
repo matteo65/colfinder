@@ -178,11 +178,7 @@ All operations are performed entirely in RAM.
 
 ## Memory Usage
 
-Typical memory consumption:
-
-```text
-~3 GB RAM
-```
+Typical memory consumption: **~3 GB RAM**  
 
 No disk storage is required.
 
