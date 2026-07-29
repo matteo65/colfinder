@@ -49,7 +49,7 @@ Substituting the values:
 λ ≈ 6.9388939
 ```
 
-Therefore, a perfectly uniform random source is expected to produce about seven collisions among the first 16 billion generated values.
+Therefore, a perfectly uniform random source is expected to produce about **seven collisions** among the first 16 billion generated values.
 
 ### Collision Distribution
 
