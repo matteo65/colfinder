@@ -184,9 +184,7 @@ No temporary files are created.
 
 ## Performance
 
-Typical execution time: **30 to 50 minutes**
-
-depending on:
+Typical execution time: **30 to 50 minutes** depending on:
 
 - CPU performance
 - Memory bandwidth
@@ -232,14 +230,26 @@ The test is considered successful when:
 ## Project Structure
 
 ```text
-├── reports/
-├── tests/
-├── src/
-    ├── colfinder.c
-    ├── prng.c
-    └── prng.h
+│
+├───reports
+│       pgc128_64.txt
+│       sirius64.txt
+│       xoshiro256ss.txt
+|       ...
+│
+└───src
+    │   colfinder.c
+    │   prng.c
+    │   prng.h
+    │
+    └───generators
+            prng_pgc128.c
+            prng_pgc64_64.c
+            prng_sirius64.c
+            prng_xoshiro256ss.c
+            ...
 ```
-In the tests/ directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; direcory reports/ also contain the execution reports of these generators.
+In the generator directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; direcory reports also contain the execution reports of these generators.
 
 ## Integrating a PRNG
 
