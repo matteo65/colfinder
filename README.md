@@ -171,6 +171,8 @@ Typical execution time: **30 to 50 minutes** depending on:
 - Memory bandwidth
 - PRNG generation speed
 
+With slow generators the time increases accordingly!
+
 ## Pass/Fail Criteria
 
 ### Immediate Failure Conditions
