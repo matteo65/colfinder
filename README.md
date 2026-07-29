@@ -8,7 +8,7 @@
 
 Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **16 billion generated values**.
 
-The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **4 GB of RAM** and completing in approximately **30 to 50 minutes** on modern hardware.
+The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **4 GB of RAM** and completing in approximately **30 to 50 minutes** on normal PC hardware.
 
 ## Motivation
 
