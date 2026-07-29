@@ -89,16 +89,11 @@ The most likely outcomes are therefore between **3 and 11 collisions** which are
 
 ### Interpreting Results
 
-The purpose of colfinder is not merely to detect the existence of collisions.
-
-Collisions are expected!
-
-In fact, finding no collisions at all may be as suspicious as finding too many.
-
+The purpose of colfinder is not merely to detect the existence of collisions.  
+Collisions are expected!  
+In fact, finding no collisions at all may be as suspicious as finding too many.  
 For a truly random 64-bit source generating 16 billion values: **P(0 collisions) ≈ 0.097%**  
-
-Therefore, a complete absence of collisions is possible but relatively unlikely.
-
+Therefore, a complete absence of collisions is possible but relatively unlikely.  
 Likewise, observing a significantly larger number of collisions than predicted may indicate structural weaknesses, non-uniformity, or hidden correlations within the generator.
 
 ### Why Collision Counting Matters
@@ -111,18 +106,14 @@ Traditional statistical test suites such as TestU01 and PractRand evaluate many 
 - Correlation structure
 - Pattern frequencies
 
-However, these suites do not directly measure the exact number of duplicated 64-bit outputs produced over billions of generated values.
-
-As a consequence, a generator may successfully pass conventional statistical batteries while still exhibiting collision behavior that deviates from theoretical expectations.
-
-colfinder addresses this gap by performing a direct empirical measurement of collisions over a very large sample size.
-
-For this reason, it should be considered a complementary validation tool rather than a replacement for established statistical test suites.
+However, these suites do not directly measure the exact number of duplicated 64-bit outputs produced over billions of generated values.  
+As a consequence, a generator may successfully pass conventional statistical batteries while still exhibiting collision behavior that deviates from theoretical expectations.  
+Colfinder addresses this gap by performing a direct empirical measurement of collisions over a very large sample size.  
+For this reason, it should be considered a complementary validation tool rather than a replacement for established statistical test suites.  
 
 ### Triple Collisions
 
-The probability of observing a value three times among 16 billion uniformly random 64-bit outputs is extraordinarily small.
-
+The probability of observing a value three times among 16 billion uniformly random 64-bit outputs is extraordinarily small.  
 The expected number of triple collisions is approximately: **N³ / 6M²**  
 
 which yields: **≈ 0.2 × 10⁻¹⁰**  
@@ -132,15 +123,12 @@ For this reason, the appearance of a triple collision is treated by colfinder as
 ### Accepted Range
 
 Although the theoretical expectation is approximately: **7 collisions**  random variation naturally occurs.  
-
-colfinder therefore accepts any final result in the interval: **1 to 15 collisions** provided that no other failure condition is triggered.
-
+Colfinder therefore accepts any final result in the interval: **1 to 15 collisions** provided that no other failure condition is triggered.  
 If the number of collisions is 1 or 14 or 15 the test passes but is flagged as **SUSPICIOUS**; in this case it is recommended to rerun it with other seeds to see if it was an unfortunate case.  
 
 ## Algorithm
 
-A straightforward collision analysis of 16 billion 64-bit values would require an impractical or very expensive amount of memory.
-
+A straightforward collision analysis of 16 billion 64-bit values would require an impractical or very expensive amount of memory.  
 To overcome this limitation, colfinder divides the analysis into 32 independent passes.
 
 ### Block Partitioning
@@ -172,10 +160,8 @@ The process is repeated for all 32 blocks; all operations are performed entirely
 ## Memory Usage
 
 Typical memory consumption: **~4 GB RAM**  
-
-No disk storage is required.
-
-No temporary files are created.
+No disk storage is required.  
+No temporary files are created.  
 
 ## Performance
 
@@ -193,10 +179,8 @@ The test terminates immediately (failure) when one of the following conditions o
 
 #### Non-Uniform Block Size
 
-Expected block size: **500,000,000**
-
+Expected block size: **500,000,000**  
 Failure occurs if: **block_size <= 495,000,000 or block_size >= 505,000,000**  
-
 This indicates a significant deviation from the expected uniform distribution.
 
 #### Triple-or-Higher Collision
@@ -210,8 +194,7 @@ Failure occurs if: **collision_count > 15**
 
 #### No Collisions Detected
 
-Failure occurs if the final **collision_count == 0**
-
+Failure occurs if the final **collision_count == 0**  
 A complete absence of collisions is statistically possible but sufficiently unlikely to be considered suspicious.
 
 ### Successful Completion
@@ -249,7 +232,6 @@ In the generator/ directory there are some prng.c files specific to some well-kn
 ## Integrating a PRNG
 
 To test a generator, edit `prng.c`.
-
 The following functions must be implemented:
 
 ```c
@@ -297,10 +279,8 @@ Example using GCC:
 gcc -O3 colfinder.c prng.c -o colfinder
 ```
 
-POSIX-compatible C compiler should work.
-
-The project has no external dependencies.
-
+POSIX-compatible C compiler should work.  
+The project has no external dependencies.  
 You can compile colfinder for a generator in the tests directory with this command:
 
 ```bash
@@ -316,9 +296,8 @@ Running the program without arguments display the built-in help screen.
 
 ## Hash Function Analysis
 
-Although primarily designed for PRNG evaluation, colfinder can also be adapted to analyze collisions produced by 64-bit hash functions.
-
-With minor modifications, the same collision-counting engine can be used to verify whether a hashing algorithm exhibits collision behavior consistent with theoretical expectations.
+Although primarily designed for PRNG evaluation, colfinder can also be adapted to analyze collisions produced by 64-bit hash functions.  
+With minor modifications, the same collision-counting engine can be used to verify whether a hashing algorithm exhibits collision behavior consistent with theoretical expectations.  
 
 ## License
 
