@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
-https://img.shields.io/badge/language-C-orange
+![Language](https://img.shields.io/badge/language-C-orange)
 
 **Colfinder** is a high-performance collision analysis tool for 64-bit pseudo-random number generators (PRNGs).
 
