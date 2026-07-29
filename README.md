@@ -2,9 +2,9 @@
 
 **Colfinder** is a high-performance collision analysis tool for 64-bit pseudo-random number generators (PRNGs).
 
-Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **12 billion generated values**.
+Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **16 billion generated values**.
 
-The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **3 GB of RAM** and completing in approximately **20 to 30 minutes** on modern hardware.
+The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **4 GB of RAM** and completing in approximately **30 to 50 minutes** on modern hardware.
 
 ## Motivation
 
@@ -29,53 +29,61 @@ The collision behavior of a 64-bit PRNG can be estimated using the classical bir
 A perfect 64-bit generator produces values uniformly distributed over the space:
 
 ```text
-N = 2^64
+M = 2^64
   = 18,446,744,073,709,551,616
 ```
 
 When generating:
 
 ```text
-n = 12,000,000,000
+N = 16,000,000,000
 ```
 
 values, the expected number of pairwise collisions is approximately:
 
 ```text
-λ = n(n - 1) / (2N)
+λ = N(N - 1) / (2N)
 ```
 
 Substituting the values:
 
 ```text
-λ ≈ 3.903
+λ ≈ 6.9388939
 ```
 
-Therefore, a perfectly uniform random source is expected to produce about four collisions among the first 12 billion generated values.
+Therefore, a perfectly uniform random source is expected to produce about seven collisions among the first 16 billion generated values.
 
 ### Collision Distribution
 
 For such a large output space and relatively small collision probability, the number of observed collisions is well approximated by a Poisson distribution:
 
 ```text
-X ~ Poisson(λ = 3.903)
+X ~ Poisson(λ = 6.9388939)
 ```
 
 Approximate probabilities are:
 
 | Collisions | Probability |
 |-----------:|------------:|
-| 0 | 2.0% |
-| 1 | 7.9% |
-| 2 | 15.4% |
-| 3 | 20.1% |
-| 4 | 19.6% |
-| 5 | 15.3% |
-| 6 | 10.0% |
-| 7 | 5.6% |
-| 8 | 2.7% |
+|0|0.097%|
+|1|0.673%|
+|2|2.334%|
+|3|5.398%|
+|4|9.363%|
+|5|12.994%|
+|6|15.027%|
+|7|14.896%|
+|8|12.920%|
+|9|9.962%|
+|10|6.912%|
+|11|4.360%|
+|12|2.521%|
+|13|1.346%|
+|14|0.667%|
+|15|0.309%|
+|16|0.134%|
 
-The most likely outcomes are therefore between **2 and 5 collisions** which are centered around the theoretical expectation.
+The most likely outcomes are therefore between **3 and 11 collisions** which are centered around the theoretical expectation.
 
 ### Interpreting Results
 
@@ -85,7 +93,7 @@ Collisions are expected.
 
 In fact, finding no collisions at all may be as suspicious as finding too many.
 
-For a truly random 64-bit source generating 12 billion values: **P(0 collisions) ≈ 2%**  
+For a truly random 64-bit source generating 16 billion values: **P(0 collisions) ≈ 0.097%**  
 
 Therefore, a complete absence of collisions is possible but relatively unlikely.
 
@@ -123,21 +131,21 @@ For this reason, the appearance of a triple collision is treated by colfinder as
 
 ### Accepted Range
 
-Although the theoretical expectation is approximately: **3.9 collisions**  random variation naturally occurs.  
+Although the theoretical expectation is approximately: **7 collisions**  random variation naturally occurs.  
 
-colfinder therefore accepts any final result in the interval: **1 to 8 collisions** provided that no other failure condition is triggered.
+colfinder therefore accepts any final result in the interval: **1 to 15 collisions** provided that no other failure condition is triggered.
 
 This range comfortably encompasses the vast majority of outcomes expected from a statistically sound 64-bit PRNG generating the first 12 billion values of its sequence.
 
 ## Overview
 
-The program analyzes the first **12,000,000,000** generated 64-bit values.
+The program analyzes the first **16,000,000,000** generated 64-bit values.
 
 The final result provides a direct measurement of the actual number of duplicated values observed.
 
 ## Algorithm
 
-A straightforward collision analysis of 12 billion 64-bit values would require an impractical amount of memory.
+A straightforward collision analysis of 16 billion 64-bit values would require an impractical amount of memory.
 
 To overcome this limitation, colfinder divides the analysis into 32 independent passes.
 
@@ -151,7 +159,7 @@ Only values whose lower 5 bits match the current pass number are retained:
 (value & 31) == block_id
 ```
 
-Assuming a uniform distribution, each block contains approximately **12,000,000,000 / 32 ≈ 375,000,000 values** which fits into roughly 3 GB of memory.
+Assuming a uniform distribution, each block contains approximately **16,000,000,000 / 32 ≈ 500,000,000 values** which fits into roughly 4 GB of memory.
 
 ### Sorting
 
@@ -178,7 +186,7 @@ All operations are performed entirely in RAM.
 
 ## Memory Usage
 
-Typical memory consumption: **~3 GB RAM**  
+Typical memory consumption: **~4 GB RAM**  
 
 No disk storage is required.
 
@@ -186,7 +194,7 @@ No temporary files are created.
 
 ## Performance
 
-Typical execution time: **20 to 30 minutes**
+Typical execution time: **30 to 50 minutes**
 
 depending on:
 
@@ -202,16 +210,16 @@ The test terminates immediately when one of the following conditions occurs.
 
 #### Non-Uniform Block Size
 
-Expected block size: **375,000,000**
+Expected block size: **500,000,000**
 
-Failure occurs if: **block_size <= 370,000,000 or block_size >= 380,000,000**  
+Failure occurs if: **block_size <= 495,000,000 or block_size >= 505,000,000**  
 
 This indicates a significant deviation from the expected uniform distribution.
 
 #### Triple-or-Higher Collision
 
 Failure occurs if a value appears three or more times.
-Such events are considered extraordinarily unlikely for a correctly behaving 64-bit PRNG over 12 billion outputs.
+Such events are considered extraordinarily unlikely for a correctly behaving 64-bit PRNG over 16 billion outputs.
 
 #### Excessive Number of Collisions
 
