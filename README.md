@@ -17,6 +17,34 @@ All the proposed solutions require the use of a very high amount of RAM and a CP
 
 Colfinder performs an accurate count, requires only about **4GB of RAM**, completes the test in **30 - 50 minutes** on a standard laptop.
 
+## Output example
+```text
+colfinder v.1.0 - Copyright(C) 2026 Matteo Zapparoli
+Testing Sirius64 (seed = 0x1234567890abcdef)
+Sample size: 16 billions
+
+Block 1/32
+Length: 500006752
+Elapsed time: 00:01:07
+
+Block 2/32
+Length: 499980877
+--------> Collision: 16657640899664079137
+Elapsed time: 00:02:12
+Remaining time: 00:33:00
+
+Block 3/32
+Length: 500023524
+Elapsed time: 00:03:16
+Remaining time: 00:31:25
+
+Block 4/32
+Length: 499990883
+Elapsed time: 00:04:20
+Remaining time: 00:30:20
+...
+```
+
 ## Motivation
 
 During the evaluation of several 64-bit PRNGs, it was observed that some generators successfully pass extensive test suites such as TestU01 and PractRand while still exhibiting an unexpected number of duplicate values when very large numbers of samples are generated.
