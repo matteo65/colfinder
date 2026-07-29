@@ -91,7 +91,7 @@ The most likely outcomes are therefore between **3 and 11 collisions** which are
 
 The purpose of colfinder is not merely to detect the existence of collisions.
 
-Collisions are expected.
+Collisions are expected!
 
 In fact, finding no collisions at all may be as suspicious as finding too many.
 
