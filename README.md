@@ -322,4 +322,4 @@ With minor modifications, the same collision-counting engine can be used to veri
 
 Licensed under the Apache License 2.0.
 
-See the `LICENSE` file for details.
+See the [LICENSE](https://github.com/matteo65/colfinder/blob/main/LICENSE) file for details.
