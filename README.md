@@ -8,9 +8,14 @@
 
 Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **16 billion generated values**.
 
-The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **4 GB of RAM** and completing in approximately **30 to 50 minutes** on normal PC hardware.
+The topic has been well-known and discussed for some time; this article on Melissa O'Neill's blog is very interesting: [https://www.pcg-random.org/posts/birthday-test.html:[(https://www.pcg-random.org/posts/birthday-test.html).  
+An interesting discussion on the topic is this issue on SmokeRand: [Adding a strong collision test?:](https://github.com/alvoskov/SmokeRand/issues/24)  
+Sebastiano Vigna proposes this solution: [coll-birth-rs:](https://github.com/vigna/coll-birth-rs)  
+The same problem arises in the analysis of hash functions and this is a solution proposed by the authors of xxHash: [collisionTest:](https://github.com/Cyan4973/xxHash/blob/dev/tests/collisions/README.md).  
 
-For network collision counting, there are solutions that require much larger amounts of RAM and CPU power at higher performance levels that are not normally available to independent researchers.
+All the proposed solutions require the use of a very high amount of RAM and a CPU with high performance that not everyone has available!  
+
+Colfinder performs an accurate count, requires only about **4GB of RAM**, completes the test in **30 - 50 minutes** on a standard laptop.
 
 ## Motivation
 
