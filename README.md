@@ -1,5 +1,12 @@
 # Colfinder 1.0
 
+https://img.shields.io/badge/version-1.0-blue
+![Language](https://img.shields.io/badge/language-C-orange)
+!License
+!Platform
+https://img.shields.io/badge/RAM-3GB-red
+https://img.shields.io/badge/samples-12B-purple
+
 **Colfinder** is a high-performance collision analysis tool for 64-bit pseudo-random number generators (PRNGs).
 
 Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **16 billion generated values**.
