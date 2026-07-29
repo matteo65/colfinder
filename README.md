@@ -230,26 +230,26 @@ The test is considered successful when:
 ## Project Structure
 
 ```text
-│
-├───reports
-│       pgc128_64.txt
+|
+|---reports
+|       pgc128_64.txt
 │       sirius64.txt
 │       xoshiro256ss.txt
 |       ...
 │
-└───src
+\---src
     │   colfinder.c
     │   prng.c
     │   prng.h
     │
-    └───generators
+    \---generators
             prng_pgc128.c
             prng_pgc64_64.c
             prng_sirius64.c
             prng_xoshiro256ss.c
             ...
 ```
-In the generator directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; direcory reports also contain the execution reports of these generators.
+In the generator/ directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; direcory reports/ also contain the execution reports of these generators.
 
 ## Integrating a PRNG
 
