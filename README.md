@@ -157,12 +157,7 @@ Assuming a uniform distribution, each block contains approximately **16,000,000,
 
 ### Sorting
 
-Each block is sorted entirely in memory using an optimized sorting implementation based on:
-
-- Quicksort
-- Insertion sort
-
-After sorting, duplicate values become adjacent and can be detected efficiently through a linear scan.
+Each block is sorted entirely in memory; after sorting, duplicate values become adjacent and can be detected efficiently through a linear scan.
 
 ### Collision Detection
 
