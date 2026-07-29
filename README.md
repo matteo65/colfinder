@@ -10,6 +10,8 @@ Unlike traditional statistical test suites such as TestU01 and PractRand, which 
 
 The tool was designed to verify whether a PRNG produces the expected number of collisions predicted by probability theory while requiring only about **4 GB of RAM** and completing in approximately **30 to 50 minutes** on normal PC hardware.
 
+For network collision counting, there are solutions that require much larger amounts of RAM and CPU power at higher performance levels that are not normally available to independent researchers.
+
 ## Motivation
 
 During the evaluation of several 64-bit PRNGs, it was observed that some generators successfully pass extensive test suites such as TestU01 and PractRand while still exhibiting an unexpected number of duplicate values when very large numbers of samples are generated.
