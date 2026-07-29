@@ -131,7 +131,7 @@ Although the theoretical expectation is approximately: **7 collisions**  random 
 
 colfinder therefore accepts any final result in the interval: **1 to 15 collisions** provided that no other failure condition is triggered.
 
-If the number of collisions is 1 or 14 or 15 the test passes but is flagged as SUSPICIOUS; in this case it is recommended to rerun it with other seeds to see if it was an unfortunate case.  
+If the number of collisions is 1 or 14 or 15 the test passes but is flagged as **SUSPICIOUS**; in this case it is recommended to rerun it with other seeds to see if it was an unfortunate case.  
 
 ## Algorithm
 
