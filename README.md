@@ -20,8 +20,6 @@ colfinder was created to provide:
 - Fast execution
 - A complementary test to traditional statistical batteries
 
-It should not be considered a replacement for TestU01 or PractRand, but rather an additional validation step capable of detecting anomalies that may not be revealed by conventional tests.
-
 ## Theoretical Background
 
 The collision behavior of a 64-bit PRNG can be estimated using the classical birthday paradox.
@@ -42,7 +40,7 @@ N = 16,000,000,000
 values, the expected number of pairwise collisions is approximately:
 
 ```text
-λ = N(N - 1) / (2N)
+λ = N(N - 1) / 2N
 ```
 
 Substituting the values:
@@ -119,13 +117,11 @@ For this reason, it should be considered a complementary validation tool rather 
 
 ### Triple Collisions
 
-The probability of observing a value three times among 12 billion uniformly random 64-bit outputs is extraordinarily small.
+The probability of observing a value three times among 16 billion uniformly random 64-bit outputs is extraordinarily small.
 
-The expected number of triple collisions is approximately: **n³ / (6N²)**  
+The expected number of triple collisions is approximately: **N³ / 6M²**  
 
-which yields: **≈ 8.5 × 10⁻¹⁰**  
-
-This corresponds to less than one expected event in a billion independent executions of the test.
+which yields: **≈ 0.2 × 10⁻¹⁰**  
 
 For this reason, the appearance of a triple collision is treated by colfinder as an immediate failure condition.
 
@@ -135,13 +131,7 @@ Although the theoretical expectation is approximately: **7 collisions**  random 
 
 colfinder therefore accepts any final result in the interval: **1 to 15 collisions** provided that no other failure condition is triggered.
 
-This range comfortably encompasses the vast majority of outcomes expected from a statistically sound 64-bit PRNG generating the first 12 billion values of its sequence.
-
-## Overview
-
-The program analyzes the first **16,000,000,000** generated 64-bit values.
-
-The final result provides a direct measurement of the actual number of duplicated values observed.
+If the number of collisions is 1 or 14 or 15 the test passes but is flagged as SUSPICIOUS; in this case it is recommended to rerun it with other seeds to see if it was an unfortunate case.  
 
 ## Algorithm
 
@@ -223,7 +213,7 @@ Such events are considered extraordinarily unlikely for a correctly behaving 64-
 
 #### Excessive Number of Collisions
 
-Failure occurs if: **collision_count > 8**
+Failure occurs if: **collision_count > 15**
 
 #### No Collisions Detected
 
@@ -239,18 +229,17 @@ The test is considered successful when:
 - No failure condition occurs
 - The final collision count is between 1 and 8 inclusive
 
-The theoretical expectation is: **3.903 collisions**  
-
-Values in the range: **3 to 5 collisions** can be regarded as particularly close to the theoretical prediction.
 
 ## Project Structure
 
 ```text
 colfinder/
+├── tests/
 ├── colfinder.c
 ├── prng.c
 └── prng.h
 ```
+In the tests/ directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; they also contain the execution reports of these generators.
 
 ## Integrating a PRNG
 
@@ -300,12 +289,18 @@ The string is displayed in the output header.
 
 Example using GCC:
 ```bash
-gcc -O3 -mcmodel=medium colfinder.c prng.c -o colfinder
+gcc -O3 colfinder.c prng.c -o colfinder
 ```
 
 POSIX-compatible C compiler should work.
 
 The project has no external dependencies.
+
+You can compile colfinder for a generator in the tests directory with this command:
+
+```bash
+gcc -O3 colfinder.c tests/prng_xoshiro256ss.c -o colfinder_xoshiro256ss
+```
 
 ## Usage
 
@@ -316,17 +311,6 @@ colfinder [start]
 Running the program without arguments display the built-in help screen.
 
 The optional `start` parameter allows execution to begin from a specific block.
-
-## Design Goals
-
-colfinder was designed with the following objectives:
-
-- Exact collision counting
-- No statistical approximations
-- Low memory footprint
-- No temporary files
-- Cross-platform portability
-- Compatibility with any 64-bit PRNG- Practical execution time on consumer hardware
 
 ## Hash Function Analysis
 
