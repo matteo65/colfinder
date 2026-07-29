@@ -272,7 +272,7 @@ char *prng_name = "MyPrng64 seed=123456789";
 
 The string is displayed in the output header.
 
-# Compilation
+## Compilation
 
 Example using GCC:
 ```bash
@@ -298,6 +298,15 @@ Running the program without arguments display the built-in help screen.
 
 Although primarily designed for PRNG evaluation, colfinder can also be adapted to analyze collisions produced by 64-bit hash functions.  
 With minor modifications, the same collision-counting engine can be used to verify whether a hashing algorithm exhibits collision behavior consistent with theoretical expectations.  
+
+## Some reports
+
+|Generator    |Seed|#Collisions|Result|
+|-------------|----|-----------|-----|
+|xoshiro256** |0x1234, 0x5678, 0x90ab, 0xcdef|6| SUCCESS|
+|pgc64_64 |state=0x1234567890abcdef, inc=1| 0|FAIL|
+|pgc128_64|state=0x123456789, inc=0x987654321|5|SUCCESS|
+|sirius64 |0x1234567890abcdef|5|SUCCESS|
 
 ## License
 
