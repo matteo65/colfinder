@@ -172,11 +172,7 @@ Every duplicate value encountered after sorting is:
 - Counted
 - Included in the final statistics
 
-The process is repeated for all 32 blocks.
-
-No temporary files are used.
-
-All operations are performed entirely in RAM.
+The process is repeated for all 32 blocks; all operations are performed entirely in RAM.
 
 ## Memory Usage
 
