@@ -1,0 +1,164 @@
+Colfinder v.1.0 - Copyright(C) 2026 Matteo Zapparoli
+Testing PGC64_64 (state=0x1234567890abcdef, inc=1)
+Sample size: 16 billions
+
+Block 1/32
+Length: 500010248
+Elapsed time: 00:01:15
+
+Block 2/32
+Length: 499971921
+Elapsed time: 00:02:28
+Remaining time: 00:37:00
+
+Block 3/32
+Length: 499992978
+Elapsed time: 00:03:41
+Remaining time: 00:35:17
+
+Block 4/32
+Length: 500003428
+Elapsed time: 00:04:53
+Remaining time: 00:34:04
+
+Block 5/32
+Length: 499980033
+Elapsed time: 00:06:04
+Remaining time: 00:32:24
+
+Block 6/32
+Length: 500011173
+Elapsed time: 00:07:16
+Remaining time: 00:31:12
+
+Block 7/32
+Length: 500057710
+Elapsed time: 00:08:28
+Remaining time: 00:30:00
+
+Block 8/32
+Length: 500060545
+Elapsed time: 00:09:40
+Remaining time: 00:28:48
+
+Block 9/32
+Length: 499973383
+Elapsed time: 00:10:51
+Remaining time: 00:27:36
+
+Block 10/32
+Length: 499939166
+Elapsed time: 00:12:03
+Remaining time: 00:26:24
+
+Block 11/32
+Length: 500014097
+Elapsed time: 00:13:14
+Remaining time: 00:25:12
+
+Block 12/32
+Length: 499991554
+Elapsed time: 00:14:25
+Remaining time: 00:24:00
+
+Block 13/32
+Length: 499985328
+Elapsed time: 00:15:36
+Remaining time: 00:22:48
+
+Block 14/32
+Length: 500028255
+Elapsed time: 00:16:48
+Remaining time: 00:21:36
+
+Block 15/32
+Length: 499996912
+Elapsed time: 00:17:59
+Remaining time: 00:20:07
+
+Block 16/32
+Length: 500048713
+Elapsed time: 00:19:10
+Remaining time: 00:18:56
+
+Block 17/32
+Length: 499973427
+Elapsed time: 00:20:21
+Remaining time: 00:17:45
+
+Block 18/32
+Length: 499990456
+Elapsed time: 00:21:32
+Remaining time: 00:16:34
+
+Block 19/32
+Length: 500009228
+Elapsed time: 00:22:43
+Remaining time: 00:15:23
+
+Block 20/32
+Length: 499988063
+Elapsed time: 00:23:54
+Remaining time: 00:14:12
+
+Block 21/32
+Length: 500004285
+Elapsed time: 00:25:06
+Remaining time: 00:13:01
+
+Block 22/32
+Length: 500012405
+Elapsed time: 00:26:18
+Remaining time: 00:11:50
+
+Block 23/32
+Length: 500016643
+Elapsed time: 00:27:30
+Remaining time: 00:10:39
+
+Block 24/32
+Length: 499990705
+Elapsed time: 00:28:42
+Remaining time: 00:09:28
+
+Block 25/32
+Length: 500028538
+Elapsed time: 00:29:55
+Remaining time: 00:08:17
+
+Block 26/32
+Length: 499993079
+Elapsed time: 00:31:08
+Remaining time: 00:07:06
+
+Block 27/32
+Length: 499969421
+Elapsed time: 00:32:20
+Remaining time: 00:05:55
+
+Block 28/32
+Length: 499991552
+Elapsed time: 00:33:33
+Remaining time: 00:04:44
+
+Block 29/32
+Length: 500011413
+Elapsed time: 00:34:46
+Remaining time: 00:03:33
+
+Block 30/32
+Length: 499991576
+Elapsed time: 00:35:58
+Remaining time: 00:02:22
+
+Block 31/32
+Length: 499972387
+Elapsed time: 00:37:10
+Remaining time: 00:01:11
+
+Block 32/32
+Length: 499991378
+Elapsed time: 00:38:24
+Remaining time: 00:00:00
+
+FAIL: No collisions found!
