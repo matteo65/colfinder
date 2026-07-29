@@ -139,7 +139,7 @@ If the number of collisions is 1 or 14 or 15 the test passes but is flagged as *
 
 ## Algorithm
 
-A straightforward collision analysis of 16 billion 64-bit values would require an impractical amount of memory.
+A straightforward collision analysis of 16 billion 64-bit values would require an impractical or very expensive amount of memory.
 
 To overcome this limitation, colfinder divides the analysis into 32 independent passes.
 
@@ -232,13 +232,14 @@ The test is considered successful when:
 ## Project Structure
 
 ```text
-colfinder/
+├── reports/
 ├── tests/
-├── colfinder.c
-├── prng.c
-└── prng.h
+├── src/
+    ├── colfinder.c
+    ├── prng.c
+    └── prng.h
 ```
-In the tests/ directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; they also contain the execution reports of these generators.
+In the tests/ directory there are some prng.c files specific to some well-known 64-bit PRNG algorithms such as xoshiro, pgc, splitmix; direcory reports/ also contain the execution reports of these generators.
 
 ## Integrating a PRNG
 
@@ -298,7 +299,7 @@ The project has no external dependencies.
 You can compile colfinder for a generator in the tests directory with this command:
 
 ```bash
-gcc -O3 colfinder.c tests/prng_xoshiro256ss.c -o colfinder_xoshiro256ss
+gcc -O3 colfinder.c ../tests/prng_xoshiro256ss.c -o ../colfinder_xoshiro256ss
 ```
 
 ## Usage
@@ -306,10 +307,7 @@ gcc -O3 colfinder.c tests/prng_xoshiro256ss.c -o colfinder_xoshiro256ss
 ```bash
 colfinder [start]
 ```
-
 Running the program without arguments display the built-in help screen.
-
-The optional `start` parameter allows execution to begin from a specific block.
 
 ## Hash Function Analysis
 
