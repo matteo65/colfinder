@@ -9,8 +9,8 @@
 Unlike traditional statistical test suites such as TestU01 and PractRand, which evaluate the statistical properties of generated sequences through a large collection of tests, colfinder performs a direct and exact collision count on the first **16 billion generated values**.
 
 The topic has been well-known and discussed for some time; this article on Melissa O'Neill's blog is very interesting: [A Birthday Test: Quickly Failing Some Popular PRNGs](https://www.pcg-random.org/posts/birthday-test.html).  
-An interesting discussion on the topic is this issue on SmokeRand: [Adding a strong collision test?](https://github.com/alvoskov/SmokeRand/issues/24). 
-Sebastiano Vigna proposes this solution: [coll-birth-rs](https://github.com/vigna/coll-birth-rs).
+An interesting discussion on the topic is this issue on SmokeRand: [Adding a strong collision test?](https://github.com/alvoskov/SmokeRand/issues/24).  
+Sebastiano Vigna proposes this solution: [coll-birth-rs](https://github.com/vigna/coll-birth-rs).  
 The same problem arises in the analysis of hash functions and this is a solution proposed by the authors of xxHash: [collisionTest](https://github.com/Cyan4973/xxHash/blob/dev/tests/collisions/README.md).  
 
 All the proposed solutions require the use of a very high amount of RAM and a CPU with high performance that not everyone has available!  
