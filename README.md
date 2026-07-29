@@ -141,12 +141,12 @@ To overcome this limitation, colfinder divides the analysis into 32 independent 
 
 ### Block Partitioning
 
-For pass **0, 1, 2, ... 31** the generator is restarted from the original seed and all 12 billion values are regenerated.
+For pass **1, 1, 2, ... 32** the generator is restarted from the original seed and all 16 billion values are regenerated.
 
 Only values whose lower 5 bits match the current pass number are retained:
 
 ```c
-(value & 31) == block_id
+(value & 31) == block_id - 1
 ```
 
 Assuming a uniform distribution, each block contains approximately **16,000,000,000 / 32 ≈ 500,000,000 values** which fits into roughly 4 GB of memory.
@@ -196,7 +196,7 @@ depending on:
 
 ### Immediate Failure Conditions
 
-The test terminates immediately when one of the following conditions occurs.
+The test terminates immediately (failure) when one of the following conditions occurs.
 
 #### Non-Uniform Block Size
 
@@ -227,8 +227,7 @@ The test is considered successful when:
 
 - All 32 blocks are processed
 - No failure condition occurs
-- The final collision count is between 1 and 8 inclusive
-
+- The final collision count is between 1 and 15 inclusive
 
 ## Project Structure
 
