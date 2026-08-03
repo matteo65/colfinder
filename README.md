@@ -120,8 +120,6 @@ Approximate probabilities are:
 |15|0.309%|
 |16|0.134%|
 
-The most likely outcomes are therefore between **3 and 11 collisions** which are centered around the theoretical expectation.
-
 ### Interpreting Results
 
 The purpose of colfinder is not merely to detect the existence of collisions.  
