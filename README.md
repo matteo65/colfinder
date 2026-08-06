@@ -79,7 +79,7 @@ N = 16,000,000,000
 values, the expected number of pairwise collisions is approximately:
 
 ```text
-λ = N(N - 1) / 2N
+λ = N(N - 1) / 2M
 ```
 
 Substituting the values:
