@@ -343,6 +343,7 @@ With minor modifications, the same collision-counting engine can be used to veri
 |pgc128_64|state=0x123456789, inc=0x987654321|5|SUCCESS|
 |sirius64 |0x1234567890abcdef|5|SUCCESS|
 |kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|8|SUCCESS|
+|SplitMix64|*|0|FAIL|
 
 ## License
 
