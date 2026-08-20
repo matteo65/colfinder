@@ -344,6 +344,7 @@ With minor modifications, the same collision-counting engine can be used to veri
 |sirius64 |0x1234567890abcdef|5|SUCCESS|
 |kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|8|SUCCESS|
 |SplitMix64|*|0|FAIL|
+|xoroshiro128++|0x123456789, 0x987654321|6|SUCCESS|
 
 ## License
 
