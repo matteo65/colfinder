@@ -15,7 +15,7 @@ The same problem arises in the analysis of hash functions and this is a solution
 
 All the proposed solutions require the use of a very high amount of RAM and a CPU with high performance that not everyone has available!  
 
-Colfinder performs an accurate count, requires only about **4GB of RAM**, completes the test in **30 - 50 minutes** on a standard laptop.
+Colfinder performs an accurate count, requires only about **4GB of RAM**, completes the test in **40 - 60 minutes** on a standard laptop.
 
 ## Output example
 ```text
@@ -345,6 +345,9 @@ With minor modifications, the same collision-counting engine can be used to veri
 |kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|8|SUCCESS|
 |SplitMix64|*|0|FAIL|
 |xoroshiro128++|0x123456789, 0x987654321|6|SUCCESS|
+|wyrand (v.4)|0x1234567890abcdef|14|SUSPICIOUS|
+|wyrand (v.4)|0xfedcba0987654321|9|SUCCESS|
+|wyrand (v.4)|122333444455555|13|SUCCESS|
 
 ## License
 
