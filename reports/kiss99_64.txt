@@ -3,170 +3,167 @@ Testing Kiss99 (z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef)
 Sample size: 16 billions
 
 Block 1/32
-Length: 499990081
-Elapsed time: 00:02:29
+Length: 499997445
+Elapsed time: 00:03:56
 
 Block 2/32
-Length: 499993354
-Elapsed time: 00:04:56
-Remaining time: 01:14:00
+Length: 500009588
+Elapsed time: 00:07:50
+Remaining time: 01:57:30
 
 Block 3/32
-Length: 500000564
-Elapsed time: 00:07:23
-Remaining time: 01:11:03
+Length: 499991004
+Elapsed time: 00:11:43
+Remaining time: 01:53:06
 
 Block 4/32
-Length: 500023999
-Elapsed time: 00:09:51
-Remaining time: 01:08:36
+Length: 499998627
+Elapsed time: 00:15:33
+Remaining time: 01:48:44
 
 Block 5/32
-Length: 500012551
-Elapsed time: 00:12:19
-Remaining time: 01:06:09
+Length: 499998870
+Elapsed time: 00:19:25
+Remaining time: 01:44:51
 
 Block 6/32
-Length: 500023181
-Elapsed time: 00:14:49
-Remaining time: 01:04:08
+Length: 499984504
+Elapsed time: 00:23:15
+Remaining time: 01:40:32
 
 Block 7/32
-Length: 500019883
-Elapsed time: 00:17:16
-Remaining time: 01:01:40
+Length: 500010151
+Elapsed time: 00:27:06
+Remaining time: 01:36:40
 
 Block 8/32
-Length: 500004865
-Elapsed time: 00:19:42
-Remaining time: 00:58:48
+Length: 499988016
+Elapsed time: 00:30:56
+Remaining time: 01:32:48
 
 Block 9/32
-Length: 499960430
-Elapsed time: 00:22:11
-Remaining time: 00:56:21
+Length: 499987836
+Elapsed time: 00:34:47
+Remaining time: 01:28:33
 
 Block 10/32
-Length: 499985634
-Elapsed time: 00:24:40
-Remaining time: 00:54:16
+Length: 499987384
+Elapsed time: 00:38:39
+Remaining time: 01:24:42
 
 Block 11/32
-Length: 499979980
-Elapsed time: 03:24:55
-Remaining time: 06:30:57
+Length: 500002738
+Elapsed time: 00:42:29
+Remaining time: 01:20:51
 
 Block 12/32
-Length: 499976166
---------> Collision: 5776684896871448555
---------> Collision: 7435117996056550219
---------> Collision: 11374194388055665963
-Elapsed time: 03:27:34
-Remaining time: 05:45:40
+Length: 500003748
+Elapsed time: 00:46:20
+Remaining time: 01:17:00
 
 Block 13/32
-Length: 499980375
-Elapsed time: 03:30:00
-Remaining time: 05:06:51
+Length: 500026849
+Elapsed time: 00:50:11
+Remaining time: 01:13:09
 
 Block 14/32
-Length: 500017180
-Elapsed time: 03:32:27
-Remaining time: 04:33:00
+Length: 499983804
+Elapsed time: 00:54:02
+Remaining time: 01:09:18
 
 Block 15/32
-Length: 499975990
---------> Collision: 2983773568743508334
---------> Collision: 5844608378307117294
---------> Collision: 7291785463287509774
-Elapsed time: 03:34:50
-Remaining time: 04:03:23
+Length: 499981555
+Elapsed time: 00:57:55
+Remaining time: 01:05:27
 
 Block 16/32
-Length: 500027154
-Elapsed time: 03:37:13
-Remaining time: 03:37:04
+Length: 500018035
+--------> Collision: 966228206101636335
+--------> Collision: 16626568039421306959
+Elapsed time: 01:01:51
+Remaining time: 01:01:36
 
 Block 17/32
-Length: 500028558
-Elapsed time: 03:39:38
-Remaining time: 03:13:45
+Length: 500038124
+Elapsed time: 01:05:44
+Remaining time: 00:58:00
 
 Block 18/32
-Length: 500014733
---------> Collision: 1079433534799985841
-Elapsed time: 03:42:00
-Remaining time: 02:52:40
+Length: 499989616
+Elapsed time: 01:09:38
+Remaining time: 00:54:08
 
 Block 19/32
-Length: 499982324
-Elapsed time: 03:44:23
-Remaining time: 02:33:24
+Length: 500014246
+Elapsed time: 01:13:31
+Remaining time: 00:50:16
 
 Block 20/32
-Length: 499980588
-Elapsed time: 03:46:48
-Remaining time: 02:16:00
+Length: 500015237
+Elapsed time: 01:17:21
+Remaining time: 00:46:24
 
 Block 21/32
-Length: 500020129
-Elapsed time: 03:49:12
-Remaining time: 01:59:54
+Length: 500005281
+Elapsed time: 01:21:13
+Remaining time: 00:42:32
 
 Block 22/32
-Length: 500022277
-Elapsed time: 03:51:33
-Remaining time: 01:45:10
+Length: 499975012
+Elapsed time: 01:25:03
+Remaining time: 00:38:30
 
 Block 23/32
-Length: 500002929
-Elapsed time: 03:53:55
-Remaining time: 01:31:30
+Length: 499975757
+Elapsed time: 01:28:54
+Remaining time: 00:34:39
 
 Block 24/32
-Length: 499980589
-Elapsed time: 03:56:19
-Remaining time: 01:18:40
+Length: 499998013
+Elapsed time: 01:32:44
+Remaining time: 00:30:48
 
 Block 25/32
-Length: 499983130
-Elapsed time: 03:58:42
-Remaining time: 01:06:44
+Length: 499975057
+--------> Collision: 6217891618402780440
+Elapsed time: 01:36:35
+Remaining time: 00:26:57
 
 Block 26/32
-Length: 499982245
-Elapsed time: 04:01:09
-Remaining time: 00:55:36
+Length: 500038299
+--------> Collision: 8282825046498477209
+Elapsed time: 01:40:26
+Remaining time: 00:23:06
 
 Block 27/32
-Length: 499976671
-Elapsed time: 04:03:35
-Remaining time: 00:45:05
+Length: 500019291
+Elapsed time: 01:44:17
+Remaining time: 00:19:15
 
 Block 28/32
-Length: 500019348
---------> Collision: 15504096626521166523
-Elapsed time: 04:05:58
-Remaining time: 00:35:08
+Length: 500008513
+Elapsed time: 01:48:08
+Remaining time: 00:15:24
 
 Block 29/32
-Length: 500008738
-Elapsed time: 04:08:24
-Remaining time: 00:25:39
+Length: 500000404
+Elapsed time: 01:51:59
+Remaining time: 00:11:33
 
 Block 30/32
-Length: 500035761
-Elapsed time: 04:10:52
-Remaining time: 00:16:42
+Length: 499984208
+Elapsed time: 01:55:49
+Remaining time: 00:07:42
 
 Block 31/32
-Length: 499993444
-Elapsed time: 04:13:20
-Remaining time: 00:08:10
+Length: 499984236
+Elapsed time: 01:59:40
+Remaining time: 00:03:51
 
 Block 32/32
-Length: 499997149
-Elapsed time: 04:15:48
+Length: 500008552
+Elapsed time: 02:03:30
 Remaining time: 00:00:00
 
-SUCCESS: Found 8 collisions compatible with the expected number of collisions 6.94
+SUCCESS: Found 4 collisions compatible with the expected number of collisions 6.94
+
