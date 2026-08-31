@@ -198,7 +198,7 @@ No temporary files are created.
 
 ## Performance
 
-Typical execution time: **30 to 50 minutes** depending on:
+Typical execution time: **40 to 60 minutes** depending on:
 
 - CPU performance
 - Memory bandwidth
