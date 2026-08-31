@@ -348,6 +348,7 @@ With minor modifications, the same collision-counting engine can be used to veri
 |wyrand (v.4)|0x1234567890abcdef|14|SUSPICIOUS|
 |wyrand (v.4)|0xfedcba0987654321|9|SUCCESS|
 |wyrand (v.4)|122333444455555|13|SUCCESS|
+|wyrand (v.4)|12345123451234512345||FAIL|
 
 ## License
 
