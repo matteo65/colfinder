@@ -10,6 +10,8 @@
  * The functions set_seed(), next() and the global variable prng_name
  * must be modified in according to the PRNG to be tested
  *
+ * KISS99 Copyright(C) George Marsaglia.
+ *
  */
 
 #include <stdint.h> // uint64_t
@@ -46,8 +48,8 @@ static uint32_t kiss99(void)
     uint32_t mwc = (state.z << 16) + state.w;
 
     /* XORSHIFT */
-    state.jsr ^= state.jsr << 17;
-    state.jsr ^= state.jsr >> 13;
+    state.jsr ^= state.jsr << 13;
+    state.jsr ^= state.jsr >> 17;
     state.jsr ^= state.jsr << 5;
 
     /* CONG */
