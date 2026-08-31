@@ -342,7 +342,7 @@ With minor modifications, the same collision-counting engine can be used to veri
 |pgc64_64 |state=0x1234567890abcdef, inc=1| |FAIL|
 |pgc128_64|state=0x123456789, inc=0x987654321|5|SUCCESS|
 |sirius64 |0x1234567890abcdef|5|SUCCESS|
-|kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|8|SUCCESS|
+|kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|4|SUCCESS|
 |SplitMix64|*||FAIL|
 |xoroshiro128++|0x123456789, 0x987654321|6|SUCCESS|
 |wyrand (v.4)|0x1234567890abcdef|14|SUSPICIOUS|
