@@ -339,11 +339,11 @@ With minor modifications, the same collision-counting engine can be used to veri
 |Generator    |Seed|#Collisions|Result|
 |-------------|----|-----------|-----|
 |xoshiro256** |0x1234, 0x5678, 0x90ab, 0xcdef|6| SUCCESS|
-|pgc64_64 |state=0x1234567890abcdef, inc=1| 0|FAIL|
+|pgc64_64 |state=0x1234567890abcdef, inc=1| |FAIL|
 |pgc128_64|state=0x123456789, inc=0x987654321|5|SUCCESS|
 |sirius64 |0x1234567890abcdef|5|SUCCESS|
 |kiss99_64|z=0x1234 w=0x5678 jsr=0x90ab jcong=0xcdef|8|SUCCESS|
-|SplitMix64|*|0|FAIL|
+|SplitMix64|*||FAIL|
 |xoroshiro128++|0x123456789, 0x987654321|6|SUCCESS|
 |wyrand (v.4)|0x1234567890abcdef|14|SUSPICIOUS|
 |wyrand (v.4)|0xfedcba0987654321|9|SUCCESS|
