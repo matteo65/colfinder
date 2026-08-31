@@ -1,0 +1,178 @@
+Colfinder v.1.0 - Copyright(C) 2026 Matteo Zapparoli
+Testing wyrand (seed = 0x1234567890abcdefuLL)
+Sample size: 16 billions
+
+Block 1/32
+Length: 499968962
+Elapsed time: 00:01:55
+
+Block 2/32
+Length: 499966165
+Elapsed time: 00:03:46
+Remaining time: 00:56:30
+
+Block 3/32
+Length: 500008868
+--------> Collision: 11404022412101948674
+Elapsed time: 00:05:38
+Remaining time: 00:54:08
+
+Block 4/32
+Length: 500005087
+Elapsed time: 00:07:30
+Remaining time: 00:52:16
+
+Block 5/32
+Length: 499989453
+--------> Collision: 4764458081989194372
+Elapsed time: 00:09:22
+Remaining time: 00:50:24
+
+Block 6/32
+Length: 499997448
+--------> Collision: 15216953056918713157
+Elapsed time: 00:11:13
+Remaining time: 00:48:32
+
+Block 7/32
+Length: 499958631
+--------> Collision: 6988815704187892038
+Elapsed time: 00:13:05
+Remaining time: 00:46:40
+
+Block 8/32
+Length: 500000644
+Elapsed time: 00:14:56
+Remaining time: 00:44:48
+
+Block 9/32
+Length: 500000397
+--------> Collision: 9798191721287994280
+Elapsed time: 00:16:47
+Remaining time: 00:42:33
+
+Block 10/32
+Length: 500009676
+--------> Collision: 3742915712826779593
+Elapsed time: 00:18:39
+Remaining time: 00:40:42
+
+Block 11/32
+Length: 500015541
+--------> Collision: 1364955053220000554
+Elapsed time: 00:20:29
+Remaining time: 00:38:51
+
+Block 12/32
+Length: 500003995
+Elapsed time: 00:22:20
+Remaining time: 00:37:00
+
+Block 13/32
+Length: 500020905
+Elapsed time: 00:24:12
+Remaining time: 00:35:09
+
+Block 14/32
+Length: 500021759
+Elapsed time: 00:26:03
+Remaining time: 00:33:18
+
+Block 15/32
+Length: 500019675
+Elapsed time: 00:27:55
+Remaining time: 00:31:27
+
+Block 16/32
+Length: 499993610
+--------> Collision: 6805942696102433487
+Elapsed time: 00:29:47
+Remaining time: 00:29:36
+
+Block 17/32
+Length: 500035002
+Elapsed time: 00:31:37
+Remaining time: 00:27:45
+
+Block 18/32
+Length: 499952633
+Elapsed time: 00:33:29
+Remaining time: 00:25:54
+
+Block 19/32
+Length: 499980829
+--------> Collision: 5214155334131976882
+Elapsed time: 00:35:21
+Remaining time: 00:24:03
+
+Block 20/32
+Length: 499972497
+Elapsed time: 00:37:12
+Remaining time: 00:22:12
+
+Block 21/32
+Length: 500032501
+--------> Collision: 11548758994871337652
+Elapsed time: 00:39:04
+Remaining time: 00:20:21
+
+Block 22/32
+Length: 500046583
+Elapsed time: 00:40:57
+Remaining time: 00:18:30
+
+Block 23/32
+Length: 500008387
+Elapsed time: 00:42:48
+Remaining time: 00:16:39
+
+Block 24/32
+Length: 499990140
+Elapsed time: 00:44:40
+Remaining time: 00:14:48
+
+Block 25/32
+Length: 500016191
+Elapsed time: 00:46:32
+Remaining time: 00:12:57
+
+Block 26/32
+Length: 499975198
+--------> Collision: 718348008447160217
+Elapsed time: 00:48:25
+Remaining time: 00:11:06
+
+Block 27/32
+Length: 500001873
+Elapsed time: 00:50:17
+Remaining time: 00:09:15
+
+Block 28/32
+Length: 500012844
+--------> Collision: 4570721267063357947
+--------> Collision: 9165277570508419771
+Elapsed time: 00:52:09
+Remaining time: 00:07:24
+
+Block 29/32
+Length: 500012257
+Elapsed time: 00:54:02
+Remaining time: 00:05:33
+
+Block 30/32
+Length: 499976589
+--------> Collision: 2761160357400763741
+Elapsed time: 00:55:54
+Remaining time: 00:03:42
+
+Block 31/32
+Length: 500004562
+Elapsed time: 00:57:45
+Remaining time: 00:01:51
+
+Block 32/32
+Length: 500001098
+Elapsed time: 00:59:36
+Remaining time: 00:00:00
+
+SUSPICIOUS: Found 14 collisions found, far from the expected value 6.94; it is recommended to repeat the test with other seeds

@@ -1,0 +1,128 @@
+Colfinder v.1.0 - Copyright(C) 2026 Matteo Zapparoli
+Testing wyrand (seed = 12345123451234512345ull)
+Sample size: 16 billions
+
+Block 1/32
+Length: 499998185
+--------> Collision: 14525586297468426112
+Elapsed time: 00:01:55
+
+Block 2/32
+Length: 500031108
+Elapsed time: 00:03:48
+Remaining time: 00:57:00
+
+Block 3/32
+Length: 500031439
+Elapsed time: 00:05:40
+Remaining time: 00:54:37
+
+Block 4/32
+Length: 500003168
+--------> Collision: 2315291569513124163
+Elapsed time: 00:07:31
+Remaining time: 00:52:16
+
+Block 5/32
+Length: 500018335
+Elapsed time: 00:09:23
+Remaining time: 00:50:24
+
+Block 6/32
+Length: 500021629
+--------> Collision: 5589213537324981477
+Elapsed time: 00:11:13
+Remaining time: 00:48:32
+
+Block 7/32
+Length: 500019561
+--------> Collision: 16100953491309102630
+Elapsed time: 00:13:04
+Remaining time: 00:46:40
+
+Block 8/32
+Length: 499990513
+Elapsed time: 00:14:56
+Remaining time: 00:44:48
+
+Block 9/32
+Length: 499987293
+Elapsed time: 00:16:48
+Remaining time: 00:42:56
+
+Block 10/32
+Length: 500017288
+Elapsed time: 00:18:39
+Remaining time: 00:40:42
+
+Block 11/32
+Length: 499992890
+--------> Collision: 11470481048461607626
+Elapsed time: 00:20:31
+Remaining time: 00:38:51
+
+Block 12/32
+Length: 499982822
+Elapsed time: 00:22:23
+Remaining time: 00:37:00
+
+Block 13/32
+Length: 500018163
+Elapsed time: 24:45:37
+Remaining time: 36:11:04
+
+Block 14/32
+Length: 500023676
+--------> Collision: 2478943526278270989
+Elapsed time: 24:47:35
+Remaining time: 31:52:30
+
+Block 15/32
+Length: 499969772
+--------> Collision: 5378412251290678606
+Elapsed time: 24:49:29
+Remaining time: 28:07:49
+
+Block 16/32
+Length: 499969548
+--------> Collision: 4575335916277935727
+Elapsed time: 24:51:28
+Remaining time: 24:51:28
+
+Block 17/32
+Length: 499999640
+Elapsed time: 24:53:25
+Remaining time: 21:57:30
+
+Block 18/32
+Length: 499994636
+--------> Collision: 968816491575393873
+--------> Collision: 3038374446546748817
+--------> Collision: 14397816786682585841
+Elapsed time: 24:55:20
+Remaining time: 19:22:56
+
+Block 19/32
+Length: 500015944
+--------> Collision: 3395243081879681682
+--------> Collision: 5112163663642440082
+Elapsed time: 24:57:16
+Remaining time: 17:04:24
+
+Block 20/32
+Length: 499992783
+--------> Collision: 10710448425851265619
+Elapsed time: 24:59:09
+Remaining time: 14:59:24
+
+Block 21/32
+Length: 500013542
+Elapsed time: 53:42:55
+Remaining time: 28:08:08
+
+Block 22/32
+Length: 500005153
+--------> Collision: 2393125036574136725
+--------> Collision: 15652678736034985845
+
+FAIL: Number of collisions exceeds the maximum expected value!
