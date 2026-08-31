@@ -10,6 +10,8 @@
  * The functions set_seed(), next() and the global variable prng_name
  * must be modified in according to the PRNG to be tested
  *
+ * wyrand: author Wang Yi. wyhash project, public domain (Unlicense)
+ *
  */
 
 #include <stdint.h> // uint64_t
